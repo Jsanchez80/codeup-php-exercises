@@ -33,4 +33,14 @@ $books = array(
     )
 );
 
-for
+
+foreach ($books as $key => $book) {
+		echo "$key" . PHP_EOL;
+	foreach ($book as $key => $value){
+		echo "$key $value" . PHP_EOL;
+	// if ($value > 1950) {
+	// 	echo "Book published $value";
+	// } else {
+
+	}
+	}
