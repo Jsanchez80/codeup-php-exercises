@@ -13,8 +13,8 @@ function subtract($a, $b)
 
 function multiply($a, $b)
 {
-    // Add code here
-}
+    return $a * $b; // Add code here
+}	echo multiply(2000, 5) . PHP_EOL;
 
 function divide($a, $b)
 {
