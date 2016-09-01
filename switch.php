@@ -9,18 +9,18 @@
 
  switch($dayOfWeek) {
     case 1:
-         // Output Monday
+    	echo "Monday" . PHP_EOL;     // Output Monday
     case 2:
-         // Output Tuesday
+        echo "Tuesday" . PHP_EOL; // Output Tuesday
     case 3:
-    	 // Output Wednesday 
+    	echo "Wednesday" . PHP_EOL; // Output Wednesday 
     case 4:
-    	 // Output Thursday 
+    	echo "Thursday" . PHP_EOL; // Output Thursday 
     case 5:
-     	 // Output Friday 
+     	echo "Friday" . PHP_EOL; // Output Friday 
     case 6:
-    	 // Output Saturday 
+    	echo "Saturday" . PHP_EOL; // Output Saturday 
     case 7:
-    	 // Output Sunday 
+    	echo "Sunday" . PHP_EOL; // Output Sunday 
      // etc through day 7
  }
