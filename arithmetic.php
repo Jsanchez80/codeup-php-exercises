@@ -3,12 +3,13 @@
 function add($a, $b)
 {
     return $a + $b;
-}
-
+}	echo add(225,3000) . PHP_EOL;
+	
 function subtract($a, $b)
 {
+	return $a - $b;
     // Add code here
-}
+}	echo subtract(10, 5) . PHP_EOL;
 
 function multiply($a, $b)
 {
