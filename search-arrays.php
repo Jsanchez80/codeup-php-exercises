@@ -13,7 +13,17 @@ $compare = ['Tina', 'Dean', 'Mel', 'Amy', 'Michael'];
 // 2. Create a function that returns TRUE or FALSE if an array value is found. Search for Tina and Bob in $names. Make sure it works as expected.
 ///////////////////////////////////////////////////
 
+$query = 'Dana';
 
+$result = array_search($query, $names);
+
+if ($result !== false) {
+	echo "True". PHP_EOL;
+		// echo  "I found $names[$result]. Which number would you like to call $names[$result] mobile or $names[$result] home?" . PHP_EOL; 
+} else { 
+	echo "False" . PHP_EOL;
+		// echo "I'm sorry I did not find $query, would you like me to search another contact?" . PHP_EOL;
+}
 
 
 /////////////////////////////////////////////////////////////////
