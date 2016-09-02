@@ -1,38 +1,38 @@
 <?php
 
 $companies = [
-    'Sun Microsystems' => [
+    'Sun Microsystems' =>  [
         'Vinod Khosla',
         'Bill Joy',
         'Andy Bechtolsheim',
         'Scott McNealy'
     ],
-    'Silicon Graphics' => [
+    'Silicon Graphics' =>  [
         'Jim Clark',
         'Ed McCracken'
     ],
-    'Cray' => [
+    'Cray' =>  [
         'William Norris',
         'Seymour Cray'
     ],
-    'NeXT' => [
+    'NeXT' =>  [
         'Steve Jobs',
         'Avie Tevanian',
         'Joanna Hoffman',
         'Bud Tribble',
         'Susan Kare'
     ],
-    'Acorn Computers' => [
+    'Acorn Computers' =>  [
         'Steve Furber',
         'Sophie Wilson',
         'Hermann Hauser',
         'Jim Mitchell'
     ],
-    'MIPS Technologies' => [
+    'MIPS Technologies' =>  [
         'Skip Stritter',
         'John L. Hennessy'
     ],
-    'Commodore' => [
+    'Commodore' =>  [
         'Yash Terakura',
         'Bob Russell',
         'Bob Yannes',
@@ -57,10 +57,23 @@ $companies = [
 // 3.Sort the $companies array by company name and output the results.
 ///////////////////////////////////////////////////
 
+ksort($companies);
+	echo "======================" . PHP_EOL;
+	echo "======================" . PHP_EOL;
 
+foreach ($companies as $key => $company) {
+	echo "$key" . PHP_EOL;
+	echo "======================" . PHP_EOL;
+		foreach($company as $key => $value) {
+			echo "$value" . PHP_EOL;
+		}
 
+			echo "----------------------" . PHP_EOL;
+			echo "======================" . PHP_EOL;
 
+}
 
-
-
+/////////////////////////////////////////////////////////////////
+// 4.Sort the people in each company alphabetically. You will need to use a foreach loop and will need to reassign each inner array after sorting. Output the result.
+///////////////////////////////////////////////////
 
