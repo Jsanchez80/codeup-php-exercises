@@ -23,15 +23,14 @@ echo "Hello" . PHP_EOL;
 //////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////
 
-function add($a, $b = null)
-{
+function add($a, $b = null) {
 	if (is_numeric($a) && is_numeric($b)) {
 		return $a + $b . PHP_EOL;
  	} else {
  		return throwErrorMessage("add", $a, $b);
  	}
 
-}	echo add(tom, 2999) . PHP_EOL;
+}	echo add("tom", 2999) . PHP_EOL;
 	
 //////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////
@@ -39,20 +38,26 @@ function add($a, $b = null)
 //////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////
 
-function subtract($a, $b)
-{
-	return $a - $b;
-    // Add code here
-}	echo subtract(10, 5) . PHP_EOL;
+function subtract($a, $b) {
+	if (is_numeric($a) && is_numeric($b)) {
+		return $a - $b;
+	} else { 
+		return throwErrorMessage("subtract", $a, $b);
+	}	
+		
+}	echo subtract("becky", 5) . PHP_EOL;
 ///////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////
 // Multiplication of a function
 ////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////
 
-function multiply($a, $b)
-{
-    return $a * $b; // Add code here
+function multiply($a, $b) {
+	if (is_numeric($a) && is_numeric($b)) {
+    	return $a * $b; 
+    } else {
+ 		return throwErrorMessage("multiply", $a, $b);
+ 	}
 }	echo multiply(2000, 5) . PHP_EOL;
 
 ///////////////////////////////////////////////////////////////////////
@@ -61,9 +66,13 @@ function multiply($a, $b)
 ////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////
 
-function divide($a, $b)
-{
-   return $a / $b; // Add code here
+function divide($a, $b) {
+	if (is_numeric($a) && is_numeric($b)) {
+   		return $a / $b; 
+   	} else {
+ 		return throwErrorMessage("divide", $a, $b);
+ 	}
+
 }  echo divide(400, 4) . PHP_EOL;
 
 
@@ -73,9 +82,13 @@ function divide($a, $b)
 ////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////
 
-function modulus($a, $b)
-{
-   return $a % $b; // Add code here
+function modulus($a, $b) {
+	if (is_numeric($a) && is_numeric($b)) {
+   		return $a % $b; 
+	} else {
+ 		return throwErrorMessage("modulus", $a, $b);
+ 	}
+
 }  echo modulus(20, 5) . PHP_EOL;
 
 
