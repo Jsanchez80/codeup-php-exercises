@@ -10,7 +10,7 @@ function logMessage($logLevel, $message)
 	// D values are the 4 digit year, 2 digit month, and 2 digit day
 	// that the log is taking place. I created the variable $file for this.
     ////////////////////////////////////////////////////////////////
-
+	$year = date(DATE_ATOM);
 	$file = 'log-yyyy-mm-dd.log';
 
     /////////////////////////////////////////////////////////////////
@@ -19,14 +19,37 @@ function logMessage($logLevel, $message)
     // I created a handle to set a pointer in the doc and read the 
     // contents of the doc and append any new data to the end of the doc.
     ////////////////////////////////////////////////////////////////
-    $handle = fopen($file, 'r');
+    $handle = fopen($file, 'a');
 
     ////////////////////////////////////////////////////////////////
     // 		2C. Newer logs should appear at the end of the log file.
 	// Log entries should match the format:
     ////////////////////////////////////////////////////////////////
-    fwrite($handle, PHP_EOL . 'a');
+   
+    fwrite($handle, $logLevel . $year . $message);
+
+    ///////////////////////////////////////////////////////////////
+    // *Note: Remember to close the file you opened.
+    ///////////////////////////////////////////////////////////////
+    fclose($handle);
+}
+	logMessage('ERROR ', ' An illegal attempt to access your file was made' . PHP_EOL);
+
+	///////////////////////////////////////////////////////////////
+    //		3.  Add logInfo() and logError() functions that call logMessage(),
+    // passing the appropriate log level values. Replace the calls to
+    // logMessage() with calls to the new functions you just created.
+    ///////////////////////////////////////////////////////////////
+	
+function logError($message) {
+	logErrorMessage('ERROR', $message);
 }
 
-logMessage("INFO", "This is an info message.");
-logMessage("ERROR", "This is an info message.");
+function logInfo($message) {
+	logInfoMessage('INFO', $message)
+}
+
+
+
+logInfoMessage("INFO", "This is an info message.");
+logErrorMessage("ERROR", "This is an info message.");
