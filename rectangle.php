@@ -4,8 +4,8 @@
 
 class Rectangle
 {
-	public $height;
-	public $width;
+	private $height;
+	private $width;
 
 	public function __construct($height, $width)
 	{
@@ -21,6 +21,10 @@ class Rectangle
 
 	} 
 		
+	public function perimeter()
+	{
+		return ($this->height * 2) + ($this->width * 2);
+	}
 
 // We want to test whether this is a rectangle or not:
 // 	If the height isn't equal to the width, then you have a rectangle.
@@ -35,5 +39,6 @@ class Rectangle
 	// 	}
 	// }
 }
+
 
 
