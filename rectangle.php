@@ -18,9 +18,10 @@ class Rectangle
 	public function area()
 	{
 		return $this->height * $this->width;
-		// echo "The height is" . $this->height . "and the width is" . $this->width;
+
 	} 
-		// area();
+		
+
 // We want to test whether this is a rectangle or not:
 // 	If the height isn't equal to the width, then you have a rectangle.
 //  If the sides are equal you have a square. 
