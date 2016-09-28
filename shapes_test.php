@@ -10,6 +10,7 @@ echo "the area is " . $rectangle->area() . PHP_EOL;
 // My Solution:
 $square = new Square(4, 4);
 echo "The area of this square is " . $square->area() . PHP_EOL; 
+echo 'The perimeter of the square is ' . $square->perimeter() . PHP_EOL;
 
 // Cams Solution:
 // $square = new Square(5, 5);
