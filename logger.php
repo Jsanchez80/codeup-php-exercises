@@ -33,7 +33,7 @@ function logMessage($logLevel, $message)
     ///////////////////////////////////////////////////////////////
     fclose($handle);
 }
-	logMessage('ERROR ', ' An illegal attempt to access your file was made' . PHP_EOL);
+	// logMessage('ERROR ', ' An illegal attempt to access your file was made' . PHP_EOL);
 
 	///////////////////////////////////////////////////////////////
     //		3.  Add logInfo() and logError() functions that call logMessage(),
@@ -42,14 +42,14 @@ function logMessage($logLevel, $message)
     ///////////////////////////////////////////////////////////////
 	
 function logError($message) {
-	logErrorMessage('ERROR', $message);
+	logMessage('ERROR', $message);
 }
 
 function logInfo($message) {
-	logInfoMessage('INFO', $message)
+	logMessage('INFO', $message);
 }
 
 
 
-logInfoMessage("INFO", "This is an info message.");
-logErrorMessage("ERROR", "This is an info message.");
+logInfo("INFO", "This is an info message.");
+logError("ERROR", "This is an info message.");

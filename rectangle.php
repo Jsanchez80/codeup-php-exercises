@@ -1,43 +1,69 @@
 <?php
 
-//  Create an instance of a class called Rectangle, set variables for height and width. 
-
+ 
 class Rectangle
 {
-	protected $height;
-	protected $width;
+	private $height;
+	private $width;
 
 	public function __construct($height, $width)
 	{
-		$this->height = $height;
-		$this->width = $width;
+		$this->setHeight($height);
+		$this->setWidth($width);
 	}
-//  We want to determine the overall area of the object:
-//  area is equal to height multiplied by width. If the sides are uneven in area, 
-	// you might have a rectangle. 
-	public function area()
+
+
+	public function setHeight($height)
 	{
-		return $this->height * $this->width;
+		$this->height = trim($height);
+
+	}
+
+	public function setWidth($width)
+	{
+
+		$this->width = trim($width);
+
+	}
+	
+	public function getHeight()
+	{
+		return $this->height; 
 
 	} 
-		
-	public function perimeter()
+
+	public function getWidth()
 	{
-		return ($this->height * 2) + ($this->width * 2);
+		return $this->width;
 	}
 
-// We want to test whether this is a rectangle or not:
-// 	If the height isn't equal to the width, then you have a rectangle.
-//  If the sides are equal you have a square. 
-	// function isSquare(){
-	// 	if ($this->height == $this $width) {
-	// 		return true;
-	// 		echo "This is a Rectangle";
-	// 	} else {
-	// 		return false;
-	// 		echo "Sorry, you should check your dimensions and try again";
-	// 	}
+	public function getArea()
+	{ 
+		return $this->area;
+	}
+
+	///////////////////////////////////////////////////////////////////////////
+	// This would have worked just fine, but using the get method is the result we're looking for. See the next instance called on area().  
+	/////////////////////////////////////////////////////////////////////
+	
+	// public function area()
+	// {
+	// 	return (($this->height)*($this->width));
 	// }
+
+	public function area()
+	{
+		return $this->getHeight() * $this->getWidth();
+
+	} 
+
+	public function perimeter()
+	{
+		return ($this->getHeight() *2) + ($this->getWidth() * 2);
+
+	} 
+
+
 }
 
 
