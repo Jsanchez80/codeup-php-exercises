@@ -1,18 +1,20 @@
 <?php
 
-require 'shapes_test.php';
+require 'Rectangle.php';
 // require 'Rectangle.php';
 
  class Square extends Rectangle
 {
-
-	public $height;
-	public $width;
-
-public function Square()
+	public function perimeter()
 	{
-		
-	}	
-	
+		return ($this->height * 2) + ($this->width * 2);
+	}
 }
+
+
+
+
+
+	
+
 
