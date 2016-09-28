@@ -8,17 +8,25 @@ require 'Rectangle.php';
 	private $height;
 	private $width;
 
-	public function __construct($height, $width)
+	public function __construct($height)
 	{
-		$this->height = $height;
-		$this->width = $width;
+		$this->setHeight($height);
+		$this->setWidth($height);
 	}
+
 
 	// public function area()
 	// {
-	// 	return $this->height * $this->width;
+	// 	return $this->getHeight() * $this->getWidth();
 
 	// } 
+
+	public function perimeter()
+	{
+		return ($this->getHeight() *2) + ($this->getWidth() * 2);
+
+	} 
+
 }
 
 
