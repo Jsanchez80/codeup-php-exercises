@@ -2,7 +2,7 @@
 
 //  Create an instance of a class called Rectangle, set variables for height and width. 
 
-class rectangle
+class Rectangle
 {
 	public $height;
 	public $width;
@@ -17,7 +17,7 @@ class rectangle
 	// you might have a rectangle. 
 	public function area()
 	{
-		return ($this->$height * $this->$width);
+		return $this->height * $this->width;
 		// echo "The height is" . $this->height . "and the width is" . $this->width;
 	} 
 		// area();
