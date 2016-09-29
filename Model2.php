@@ -1,9 +1,10 @@
 <?php
 
-//  Exercise for Late Static Binding
+///  Exercise for Late Static Binding
 
-// ////////////////////////////////////////////////////
-// Using the self::$table returns three data arrays with the same name...the parent over-rides the it's children and reports only data relevant to it's file. 
+// ///////////////////////////////////////////////////////////////////////////////
+// Using the static::$table returns three data arrays with the different names...the parent allows it's children and to operate and reports data relevant to their files. 
+//////////////////////////////////////////////////////////////////////////
 
 
 require_once 'User.php';
@@ -15,7 +16,7 @@ class Model
 	public static function getTableName()
 	{
 
-	return self::$table;
+	return static::$table;
 
 	}
 }
